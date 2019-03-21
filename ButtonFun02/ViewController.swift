@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var countlable: UILabel!
     
     var count = 0
+    var checked = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +27,19 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: Any) {
         
         myLable.text = "버튼 A를 눌렀습니다."
-        count = count + 1
-        if (count == 10){
-            count = 0
+        if (checked == 0){
+            count = count + 1
+            if(count>=10){
+                checked = 1
+            }
         }
+            if (checked == 1){
+                count = count - 1
+                if(count==0){
+                    checked = 0;
+        }
+        
+    }
         countlable.text = String(count)
     }
     @IBAction func buttonBpressed(_ sender: Any) {
