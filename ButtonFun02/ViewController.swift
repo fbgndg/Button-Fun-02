@@ -9,12 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var myLable: UILabel!
+    @IBOutlet weak var lableB: UILabel!
+    @IBOutlet weak var countlable: UILabel!
+    
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //myLable.text = "굳"
+        countlable.text = String(count)
+        
     }
 
-
+    @IBAction func buttonPressed(_ sender: Any) {
+        
+        myLable.text = "버튼 A를 눌렀습니다."
+        countlable.text = String(count)
+        count = count + 1
+    }
+    
+    @IBAction func buttonBpressed(_ sender: Any) {
+    
+        lableB.text = "버튼 B를 눌렀습니다."
+    }
+    
 }
 
