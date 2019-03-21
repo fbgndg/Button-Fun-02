@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //myLable.text = "굳"
+        //myLable.text = "굳굳"
         countlable.text = String(count)
         
     }
