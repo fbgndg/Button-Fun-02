@@ -26,14 +26,17 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: Any) {
         
         myLable.text = "버튼 A를 눌렀습니다."
-        countlable.text = String(count)
         count = count + 1
+        if (count == 10){
+            count = 0
+        }
+        countlable.text = String(count)
     }
-    
     @IBAction func buttonBpressed(_ sender: Any) {
     
         lableB.text = "버튼 B를 눌렀습니다."
     }
     
 }
+
 
